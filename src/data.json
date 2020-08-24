@@ -1,0 +1,92 @@
+{
+    "projects": [
+        {
+            "id": "01",
+            "name": "Games database",
+            "image": "https://docs.microsoft.com/pl-pl/azure/azure-monitor/learn/media/dotnetcore-quick-start/4overview.png",
+            "subname": "Program for handling complaints",
+            "listData": [
+                "adding a case",
+                "edition",
+                "summary in the form of a table",
+                "editing the visibility of columns",
+                "user authentication",
+                "data synchronization with firebase"
+            ],
+            "technologies": [
+                "react",
+                "firebase",
+                "sass",
+                "rwd"
+            ],
+            "live": "https://secure-sierra-20780.herokuapp.com/",
+            "code": "https://github.com/Axemaher/portfolio"
+        },
+        {
+            "id": "02",
+            "name": "Games srsdf",
+            "image": "https://docs.microsoft.com/pl-pl/azure/azure-monitor/learn/media/dotnetcore-quick-start/4overview.png",
+            "subname": "Program for handling complaints",
+            "listData": [
+                "adding a case",
+                "edition",
+                "summary in the form of a table",
+                "editing the visibility of columns",
+                "user authentication",
+                "data synchronization with firebase"
+            ],
+            "technologies": [
+                "react",
+                "firebase",
+                "sass",
+                "rwd"
+            ],
+            "live": "https://secure-sierra-20780.herokuapp.com/",
+            "code": "https://github.com/Axemaher/portfolio"
+        },
+        {
+            "id": "03",
+            "name": "sdfsdsd database",
+            "image": "https://docs.microsoft.com/pl-pl/azure/azure-monitor/learn/media/dotnetcore-quick-start/4overview.png",
+            "subname": "Program for handling complaints",
+            "listData": [
+                "adding a case",
+                "edition",
+                "summary in the form of a table",
+                "editing the visibility of columns",
+                "user authentication",
+                "data synchronization with firebase"
+            ],
+            "technologies": [
+                "react",
+                "firebase",
+                "sass",
+                "rwd"
+            ],
+            "live": "https://secure-sierra-20780.herokuapp.com/",
+            "code": "https://github.com/Axemaher/portfolio"
+        },
+        {
+            "id": "04",
+            "name": "Gasdggdsbase",
+            "image": "https://docs.microsoft.com/pl-pl/azure/azure-monitor/learn/media/dotnetcore-quick-start/4overview.png",
+            "subname": "Program for handling complaints",
+            "listData": [
+                "adding a case",
+                "edition",
+                "summary in the form of a table",
+                "editing the visibility of columns",
+                "user authentication",
+                "data synchronization with firebase"
+            ],
+            "technologies": [
+                "react",
+                "firebase",
+                "sass",
+                "rwd"
+            ],
+            "live": "https://secure-sierra-20780.herokuapp.com/",
+            "code": "https://github.com/Axemaher/portfolio"
+        }
+    ]
+}
