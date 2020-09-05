@@ -3,51 +3,45 @@
         {
             "id": "01",
             "name": "Games database",
-            "image": "https://docs.microsoft.com/pl-pl/azure/azure-monitor/learn/media/dotnetcore-quick-start/4overview.png",
-            "subname": "Program for handling complaints",
+            "image": "https://images.ctfassets.net/fr32xkxy9k0q/vKh2DKWWynhs7ce7ZsNG2/8bd57043cfeb199f1d24f38ea2292a22/games-database.png",
+            "subname": "Games website",
             "listData": [
-                "adding a case",
-                "edition",
-                "summary in the form of a table",
-                "editing the visibility of columns",
+                "getting data from IGDB API",
                 "user authentication",
-                "data synchronization with firebase"
+                "integration with firebase",
+                "managing user games"
             ],
             "technologies": [
                 "react",
                 "firebase",
                 "sass",
-                "rwd"
+                "rwd",
+                "api"
             ],
-            "live": "https://secure-sierra-20780.herokuapp.com/",
-            "code": "https://github.com/Axemaher/portfolio"
+            "live": "https://mb2-games-database.netlify.app/",
+            "code": "https://github.com/Axemaher/games-database"
         },
         {
             "id": "02",
-            "name": "Games srsdf",
-            "image": "https://docs.microsoft.com/pl-pl/azure/azure-monitor/learn/media/dotnetcore-quick-start/4overview.png",
-            "subname": "Program for handling complaints",
+            "name": "Garlic website",
+            "image": "https://images.ctfassets.net/fr32xkxy9k0q/4ekjuchx1MbRK27jy3ojq1/eaa5f92a4a8e4600e1407596f511e995/garlic-website.png",
+            "subname": "Website",
             "listData": [
-                "adding a case",
-                "edition",
-                "summary in the form of a table",
-                "editing the visibility of columns",
-                "user authentication",
-                "data synchronization with firebase"
+                "data from Contentful"
             ],
             "technologies": [
-                "react",
-                "firebase",
-                "sass",
+                "gatsby",
+                "styled components",
+                "contentful",
                 "rwd"
             ],
-            "live": "https://secure-sierra-20780.herokuapp.com/",
-            "code": "https://github.com/Axemaher/portfolio"
+            "live": "https://mb2-garlic.netlify.app/",
+            "code": "https://github.com/Axemaher/garlic-website"
         },
         {
             "id": "03",
-            "name": "sdfsdsd database",
-            "image": "https://docs.microsoft.com/pl-pl/azure/azure-monitor/learn/media/dotnetcore-quick-start/4overview.png",
+            "name": "Reclamations",
+            "image": "https://images.ctfassets.net/fr32xkxy9k0q/6zDTX8Ds6xehTsEmJArQUD/1657393ade60e8a025ed9608e761e7af/reclamations.png",
             "subname": "Program for handling complaints",
             "listData": [
                 "adding a case",
@@ -55,7 +49,8 @@
                 "summary in the form of a table",
                 "editing the visibility of columns",
                 "user authentication",
-                "data synchronization with firebase"
+                "data synchronization with firebase",
+                "testing: e-mail:test@test.pl password:test123"
             ],
             "technologies": [
                 "react",
@@ -63,30 +58,28 @@
                 "sass",
                 "rwd"
             ],
-            "live": "https://secure-sierra-20780.herokuapp.com/",
-            "code": "https://github.com/Axemaher/portfolio"
+            "live": "https://mb2-reclamations.netlify.app/",
+            "code": "https://github.com/Axemaher/reklamacje"
         },
         {
             "id": "04",
-            "name": "Gasdggdsbase",
-            "image": "https://docs.microsoft.com/pl-pl/azure/azure-monitor/learn/media/dotnetcore-quick-start/4overview.png",
+            "name": "Weather app",
+            "image": "https://images.ctfassets.net/fr32xkxy9k0q/4cqPG89hjFQePh7Nx1cI7Z/365367eb664c2c2c0e87e883149fcde1/weather.png",
             "subname": "Program for handling complaints",
             "listData": [
-                "adding a case",
-                "edition",
-                "summary in the form of a table",
-                "editing the visibility of columns",
-                "user authentication",
-                "data synchronization with firebase"
+                "searching",
+                "saving city to local storage",
+                "validation of city name",
+                "displaying weather details"
             ],
             "technologies": [
                 "react",
-                "firebase",
                 "sass",
-                "rwd"
+                "rwd",
+                "api"
             ],
-            "live": "https://secure-sierra-20780.herokuapp.com/",
-            "code": "https://github.com/Axemaher/portfolio"
+            "live": "http://quiet-wildwood-94705.herokuapp.com/",
+            "code": "https://github.com/Axemaher/Weather-app"
         }
     ]
 }

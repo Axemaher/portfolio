@@ -15,24 +15,28 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 const StyledWrapper = styled.div`
-  min-height: 100vh;
-  width: 100%;
   font-size:62.5%;
   position: relative;
   display: flex;
   justify-content: center;
   background-color: ${({ theme }) => theme.colors.background};
+  overflow-x: hidden;
+  padding: 0 50px;
+  @media ${({ theme }) => theme.device.tablet}{
+    padding: 0 20px;
+  }
+  @media ${({ theme }) => theme.device.mobileXL}{
+    padding: 0 7px;
+  }
 `;
 
 const StyledPage = styled.div`
-  min-height: 100vh;
   width: 100vw;
   display: flex;
   justify-content: center;
   position: relative;
-  @media ${({ theme }) => theme.device.laptopL}{
+  /* @media ${({ theme }) => theme.device.laptopL}{
     max-width: 1440px;
-    padding: 0 40px;
   }
   @media ${({ theme }) => theme.device.tablet}{
         width: 100vw;
@@ -40,7 +44,7 @@ const StyledPage = styled.div`
   }
   @media ${({ theme }) => theme.device.mobileL}{
         padding: 0 10px;
-    }
+    } */
 `;
 
 const Layout = ({ children }) => (

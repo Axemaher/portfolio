@@ -33,8 +33,6 @@ const StyledCircleLabel = styled.span`
     left: -160px;
     top: -3px;
     font-size: .8rem;
-    -webkit-transition: color .5s;
-    transition: color .5s;
     width: 150px;
     transition: color .5s;
 `;
@@ -109,11 +107,11 @@ const Navigation = ({ projects, activeProject, handleCLick }) => {
         if (i === 0) {
             return (
                 <StyledSectionBarElement
-                    key={project.name}
-                    id={project.name}>
+                    key={project.id}
+                    id={project.id}>
                     <StyledSectionBarAnchorFirst
                         active={activeProject === project.id}
-                        onClick={() => handleCLick(project.name)}>
+                        onClick={() => handleCLick(project.id)}>
                         <StyledCircleLabel>{project.name}</StyledCircleLabel>
                         <StyledSectionBarSpan />
                     </StyledSectionBarAnchorFirst>
@@ -123,11 +121,11 @@ const Navigation = ({ projects, activeProject, handleCLick }) => {
         if (i < projects.length - 1) {
             return (
                 <StyledSectionBarElement
-                    key={project.name}
-                    id={project.name}>
+                    key={project.id}
+                    id={project.id}>
                     <StyledSectionBarAnchor
                         active={activeProject === project.id}
-                        onClick={() => handleCLick(project.name)}>
+                        onClick={() => handleCLick(project.id)}>
                         <StyledCircleLabel>{project.name}</StyledCircleLabel>
                         <StyledSectionBarSpan />
                     </StyledSectionBarAnchor>
@@ -137,11 +135,11 @@ const Navigation = ({ projects, activeProject, handleCLick }) => {
         if (i === projects.length - 1) {
             return (
                 <StyledSectionBarElement
-                    key={project.name}
-                    id={project.name}>
+                    key={project.id}
+                    id={project.id}>
                     <StyledSectionBarAnchorLast
                         active={activeProject === project.id}
-                        onClick={() => handleCLick(project.name)}>
+                        onClick={() => handleCLick(project.id)}>
                         <StyledCircleLabel>{project.name}</StyledCircleLabel>
                         <StyledSectionBarSpan />
                     </StyledSectionBarAnchorLast>

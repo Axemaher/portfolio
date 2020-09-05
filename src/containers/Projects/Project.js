@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react';
 import styled from 'styled-components';
+import ButtonAnchor from '../../components/ButtonAnchor';
 
 const StyledSection = styled.section`
     margin: 0 auto;
     padding: 50px 0;
     margin-bottom: 100px;
-    width: calc(100vw - 20px);
     max-width: 1440px;
     display: grid;
     font-size: 1.5em;
@@ -75,12 +75,6 @@ const StyledLinks = styled.div`
     align-items: center;
 `;
 
-const StyledLink = styled.a`
-    margin: 10px;
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;  
-`;
 
 const StyledDescription = styled.div`
     grid-area: description;
@@ -94,12 +88,6 @@ const StyledListTitle = styled.p``;
 
 const StyledDescriptionList = styled.ul`
     list-style: none;
-`;
-
-const StyledTechnologiesList = styled.ul`
-    list-style: none;
-    display: flex;
-    padding-left: 0;
 `;
 
 const StyledPointedElement = styled.li`
@@ -117,28 +105,6 @@ const StyledPointedElement = styled.li`
     }
 `;
 
-const StyledTechnologiesLabel = styled.span`
-    position: absolute;
-    background-color: red;
-    bottom: -5px;
-    left: 14px;
-    padding: 2px 6px;
-    opacity: 0;
-    transition: opacity .5s;
-`;
-
-const StyledTechnologiesElement = styled.li`
-    position: relative;
-    &:hover ${StyledTechnologiesLabel}{
-        opacity: 1;
-    }
-`;
-
-const StyledTechnologiesIcon = styled.img`
-    height: 26px;
-    margin: 10px;
-`;
-
 const StyledImage = styled.img`
     box-sizing: border-box;
     width: 100%;
@@ -146,13 +112,7 @@ const StyledImage = styled.img`
 `;
 
 
-export function Project({
-    data,
-    activeProject,
-    setActiveProject,
-    pageHeight = 100,
-    refs,
-}) {
+const Project = ({ data, label, activeProject, setActiveProject, pageHeight = 100, refs, }) => {
     const observerMargin = Math.floor(pageHeight / 2);
 
     useEffect(() => {
@@ -172,8 +132,8 @@ export function Project({
             handleIntersection,
             observerConfig
         );
-        observer.observe(refs[data.name].current);
-        return () => observer.disconnect(); // Clenaup the observer if component unmount.
+        observer.observe(refs[data.id].current);
+        return () => observer.disconnect();
     }, [
         activeProject,
         setActiveProject,
@@ -184,18 +144,18 @@ export function Project({
     ]);
 
     return (
-        <StyledSection id={data.id} ref={refs[data.name]}>
+        <StyledSection data-scroll={data.id} id={data.id} ref={refs[data.id]}>
             <StyledHeader>
                 <StyledHeaderTitle>
                     <StyledTitleH2>
                         {data.name}
-                        <StyledTitleLabel>{data.id}</StyledTitleLabel>
+                        <StyledTitleLabel>{label}</StyledTitleLabel>
                     </StyledTitleH2>
                     <StyledSubtitle>{data.subtitle}</StyledSubtitle>
                 </StyledHeaderTitle>
                 <StyledLinks>
-                    <StyledLink href={data.live}>live</StyledLink>
-                    <StyledLink href={data.code}>code</StyledLink>
+                    <ButtonAnchor href={data.live}>live</ButtonAnchor>
+                    <ButtonAnchor href={data.code}>code</ButtonAnchor>
                 </StyledLinks>
             </StyledHeader>
             <StyledDescription>
@@ -208,10 +168,6 @@ export function Project({
                 <StyledListTitle>Technologies:</StyledListTitle>
                 <StyledDescriptionList>
                     {data.technologies.map(e => (
-                        // <StyledTechnologiesElement key={e}>
-                        //     <StyledTechnologiesIcon src={'https://cdn4.iconfinder.com/data/icons/scripting-and-programming-languages/512/js-512.png'}></StyledTechnologiesIcon>
-                        //     <StyledTechnologiesLabel>{e}</StyledTechnologiesLabel>
-                        // </StyledTechnologiesElement>
                         <StyledPointedElement key={e}>{e}</StyledPointedElement>
                     ))}
                 </StyledDescriptionList>
@@ -221,4 +177,4 @@ export function Project({
     );
 }
 
-
+export default Project
