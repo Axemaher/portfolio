@@ -4,4 +4,5 @@ export const colors = {
     elements: '#8DA2AA',
     brightElements: 'rgba(168,168,168,.3)',
     font: '#3E3E3E',
+    success: '#4BB543',
 }

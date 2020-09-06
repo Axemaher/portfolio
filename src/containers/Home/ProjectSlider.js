@@ -4,7 +4,6 @@ import styled from 'styled-components';
 import { projects } from '../../data.json';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { NavLink } from "react-router-dom";
 import ButtonNavLink from '../../components/ButtonNavLink'
 
 const StyledSlider = styled.div`

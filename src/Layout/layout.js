@@ -8,6 +8,7 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     font-family: 'Montserrat', sans-serif;
     scroll-behavior: smooth;
+    background-color: ${({ theme }) => theme.colors.background};
   }
   *, *::before, *::after{
     box-sizing: border-box;
@@ -19,15 +20,14 @@ const StyledWrapper = styled.div`
   position: relative;
   display: flex;
   justify-content: center;
-  background-color: ${({ theme }) => theme.colors.background};
   overflow-x: hidden;
-  padding: 0 50px;
+  /* padding: 0 50px;
   @media ${({ theme }) => theme.device.tablet}{
     padding: 0 20px;
   }
   @media ${({ theme }) => theme.device.mobileXL}{
     padding: 0 7px;
-  }
+  } */
 `;
 
 const StyledPage = styled.div`
@@ -35,7 +35,7 @@ const StyledPage = styled.div`
   display: flex;
   justify-content: center;
   position: relative;
-  /* @media ${({ theme }) => theme.device.laptopL}{
+  @media ${({ theme }) => theme.device.laptopL}{
     max-width: 1440px;
   }
   @media ${({ theme }) => theme.device.tablet}{
@@ -44,7 +44,7 @@ const StyledPage = styled.div`
   }
   @media ${({ theme }) => theme.device.mobileL}{
         padding: 0 10px;
-    } */
+    }
 `;
 
 const Layout = ({ children }) => (

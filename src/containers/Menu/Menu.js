@@ -126,15 +126,15 @@ const Menu = () => {
                             <StyledMenuLink >
                                 <StyledMenuLinkLabel >03</StyledMenuLinkLabel>
                                 <StyledMenuLinkLink
-                                    to='/skills' >
-                                    Skills
+                                    to='/projects' >
+                                    Projects
                                     </StyledMenuLinkLink>
                             </StyledMenuLink>
                             <StyledMenuLink >
                                 <StyledMenuLinkLabel >04</StyledMenuLinkLabel>
                                 <StyledMenuLinkLink
-                                    to='/projects' >
-                                    Projects
+                                    to='/contact' >
+                                    Contact
                                     </StyledMenuLinkLink>
                             </StyledMenuLink>
                         </StyledMenuLinks>

@@ -146,6 +146,7 @@ const Navigation = ({ projects, activeProject, handleCLick }) => {
                 </StyledSectionBarElement>
             )
         }
+        else return null;
     });
 
     return (

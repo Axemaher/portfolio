@@ -3,7 +3,7 @@ import Layout from '../Layout/layout'
 import { Route, Switch } from "react-router-dom";
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import Home from './Home/Home';
-// import About from '../About/About';
+import Contact from '../containers/Contact/Contact';
 import Menu from '../containers/Menu/Menu';
 import Projects from './Projects/Projects';
 import './PageAnimation.css';
@@ -27,6 +27,7 @@ const App = () => {
                   exact path="/"
                   component={() => <Home />} />
                 <Route path="/projects/" component={() => <Projects />} />
+                <Route path="/contact/" component={() => <Contact />} />
               </Switch>
 
 
