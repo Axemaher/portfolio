@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { NavLink } from "react-router-dom";
 import { CSSTransition } from 'react-transition-group';
 import MenuButton from './MenuButton';
 import styled from 'styled-components';
@@ -8,6 +7,11 @@ import magnetizeAnimation from '../../js/btnAnimation';
 import ButtonWithIco from '../../components/ButtonWithIco';
 import codepenIco from '../../images/codepen-ico.png';
 import githubIco from '../../images/github-ico.png';
+import { NavLink } from "react-router-dom";
+import {
+    BrowserRouter as Router, useLocation
+} from "react-router-dom";
+
 
 const StyledMenuContainer = styled.div`
     position: fixed;
@@ -62,8 +66,10 @@ const StyledMenuLinks = styled.ul`
 const StyledMenuLink = styled.li`
     position: relative;
     padding: 10px;
+    transform: translateX(${({ linkactive }) => linkactive ? '10px' : '0'});
+    color: ${({ theme, linkactive }) => linkactive ? theme.colors.border : theme.colors.font};
     transition: .2s ease-in;
-    &:hover{
+    &:hover, &:focus{
         transform: translateX(10px);
         color: ${({ theme }) => theme.colors.border};
     }
@@ -79,10 +85,9 @@ const StyledMenuLinkLabel = styled.span`
 
 const StyledMenuLinkLink = styled(NavLink)`
     text-decoration: none;
-    color: ${({ theme }) => theme.colors.font};
+    color: ${({ theme, linkactive }) => linkactive ? theme.colors.border : theme.colors.font};
     transition: .1s ease-in;
-    &:hover{
-        transform: translateX(10px);
+    &:hover, &:focus{
         color: ${({ theme }) => theme.colors.border};
     }
 `;
@@ -90,10 +95,34 @@ const StyledMenuLinkLink = styled(NavLink)`
 
 const Menu = () => {
     const [menuActive, setMenuActive] = useState(false)
+    const locationData = useLocation();
+    const { pathname } = locationData
 
     useEffect(() => {
         magnetizeAnimation("menu-button", 120)
     }, [])
+
+    const handleLinkActive = (to) => pathname === to ? 1 : 0;
+
+    const menuData = [
+        {
+            to: '/',
+            name: 'Home'
+        },
+        {
+            to: '/about',
+            name: 'About'
+        },
+        {
+            to: '/projects',
+            name: 'Projects'
+        },
+        {
+            to: '/contact',
+            name: 'Contact'
+        },
+    ]
+
     return (
         <>
             <MenuButton setMenuActive={setMenuActive} active={menuActive} />
@@ -109,34 +138,25 @@ const Menu = () => {
                             <StyledLogo src={require(`../../images/logo.png`)} alt="logo" />
                         </StyledLogoContainer>
                         <StyledMenuLinks >
-                            <StyledMenuLink >
-                                <StyledMenuLinkLabel >01</StyledMenuLinkLabel>
-                                <StyledMenuLinkLink
-                                    exact to='/' >
-                                    Home
-                                    </StyledMenuLinkLink>
-                            </StyledMenuLink>
-                            <StyledMenuLink >
-                                <StyledMenuLinkLabel >02</StyledMenuLinkLabel>
-                                <StyledMenuLinkLink
-                                    to='/about' >
-                                    About
-                                    </StyledMenuLinkLink>
-                            </StyledMenuLink>
-                            <StyledMenuLink >
-                                <StyledMenuLinkLabel >03</StyledMenuLinkLabel>
-                                <StyledMenuLinkLink
-                                    to='/projects' >
-                                    Projects
-                                    </StyledMenuLinkLink>
-                            </StyledMenuLink>
-                            <StyledMenuLink >
-                                <StyledMenuLinkLabel >04</StyledMenuLinkLabel>
-                                <StyledMenuLinkLink
-                                    to='/contact' >
-                                    Contact
-                                    </StyledMenuLinkLink>
-                            </StyledMenuLink>
+                            {menuData.map((link, i) => {
+                                let linkActive = handleLinkActive(link.to)
+                                return (
+                                    <StyledMenuLink
+                                        key={link.to}
+                                        linkactive={linkActive}>
+                                        <StyledMenuLinkLabel
+                                            linkactive={linkActive}>
+                                            {`0${i + 1}`}
+                                        </StyledMenuLinkLabel>
+                                        <StyledMenuLinkLink
+                                            to={link.to}
+                                            linkactive={linkActive}>
+                                            {link.name}
+                                        </StyledMenuLinkLink>
+                                    </StyledMenuLink>
+                                )
+                            })}
+
                         </StyledMenuLinks>
                         <StyledMenuSocial>
                             <ButtonWithIco href="https://github.com/Axemaher" icoUrl={codepenIco}>

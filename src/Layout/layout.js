@@ -1,7 +1,7 @@
 import React from 'react'
 import styled, { createGlobalStyle, ThemeProvider } from 'styled-components'
 import { theme } from '../utils/theme'
-
+import MobileMenu from '../containers/MobileMenu/MobileMenu';
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -9,6 +9,7 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Montserrat', sans-serif;
     scroll-behavior: smooth;
     background-color: ${({ theme }) => theme.colors.background};
+    overflow-y: overlay;
   }
   *, *::before, *::after{
     box-sizing: border-box;
@@ -54,6 +55,7 @@ const Layout = ({ children }) => (
       <StyledWrapper>
         <StyledPage>
           {children}
+          <MobileMenu />
         </StyledPage>
       </StyledWrapper>
     </>

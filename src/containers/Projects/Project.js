@@ -21,6 +21,7 @@ const StyledSection = styled.section`
         grid-template-rows: auto auto 70vw;
         grid-template-areas: "title" "description" "image";
         padding-top: 70px;
+        margin-bottom: 0;
     }
 `;
 

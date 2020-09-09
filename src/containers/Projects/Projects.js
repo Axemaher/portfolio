@@ -9,6 +9,7 @@ import PageInfo from '../PageInfo'
 
 const StyledProjectsWrapper = styled.div`
     display: block;
+    overflow-y: overlay;
 `;
 
 const Projects = () => {
