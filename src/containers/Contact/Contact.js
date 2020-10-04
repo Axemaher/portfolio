@@ -161,11 +161,11 @@ const Contact = () => {
                     <StyledSideForm>
                         <StyledForm onSubmit={e => handleSubmit(e)}>
                             <StyledInputCntainer>
-                                <StyledLabel htmlFor="email">Email:</StyledLabel>
+                                <StyledLabel htmlFor="user_email">Email:</StyledLabel>
                                 <StyledInput
                                     id="email"
                                     type="email"
-                                    name="email"
+                                    name="user_email"
                                     required
                                     value={email}
                                     onChange={e => setEmail(e.target.value)}
