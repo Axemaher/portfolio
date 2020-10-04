@@ -40,6 +40,7 @@ const ProjectSlider = () => {
         centerPadding: "100px",
         slidesToShow: 3,
         speed: 500,
+        arrows: false,
         responsive: [
             {
                 breakpoint: 1050,

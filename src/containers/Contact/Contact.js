@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import emailjs from 'emailjs-com';
 import { emailjsAPI } from '../../utils/emailjsAPI';
 import PageInfo from '../PageInfo';
+import Page from '../../components/Page';
 import { buttonStyles } from '../../components/buttonStyles';
 
 import ButtonWithIco from '../../components/ButtonWithIco';
@@ -148,57 +149,59 @@ const Contact = () => {
     }
 
     return (
-        <StyledContactWrapper>
-            <PageInfo>contact</PageInfo>
-            <StyledH2>Have some questions?</StyledH2>
-            <StyledLine></StyledLine>
-            <StyledP>write message to my:</StyledP>
-            <StyledContent>
-                <StyledSideImg>
-                </StyledSideImg>
-                <StyledSideForm>
-                    <StyledForm onSubmit={e => handleSubmit(e)}>
-                        <StyledInputCntainer>
-                            <StyledLabel htmlFor="email">Email:</StyledLabel>
-                            <StyledInput
-                                id="email"
-                                type="email"
-                                name="email"
-                                required
-                                value={email}
-                                onChange={e => setEmail(e.target.value)}
-                            />
-                        </StyledInputCntainer>
-                        <StyledInputCntainer>
-                            <StyledLabel htmlFor="message">Message:</StyledLabel>
-                            <StyledTextarea
-                                id="message"
-                                type="text"
-                                name="message"
-                                rows="6"
-                                required
-                                value={message}
-                                onChange={e => setMessage(e.target.value)}
-                            ></StyledTextarea>
-                        </StyledInputCntainer>
-                        <MessageInfoContainer>
-                            <StyledButtonSubmit>send</StyledButtonSubmit>
-                            <StyledMessageSendInfo visible={messageSend}>message sended</StyledMessageSendInfo>
-                        </MessageInfoContainer>
-                    </StyledForm>
-                </StyledSideForm>
-            </StyledContent>
-            <StyledLine></StyledLine>
-            <StyledP>or You can found my on:</StyledP>
-            <StyledSocialContainer>
-                <ButtonWithIco href="https://github.com/Axemaher" icoUrl={codepenIco}>
-                    codepen
+        <Page>
+            <StyledContactWrapper>
+                <PageInfo>contact</PageInfo>
+                <StyledH2>Have some questions?</StyledH2>
+                <StyledLine></StyledLine>
+                <StyledP>write message to my:</StyledP>
+                <StyledContent>
+                    <StyledSideImg>
+                    </StyledSideImg>
+                    <StyledSideForm>
+                        <StyledForm onSubmit={e => handleSubmit(e)}>
+                            <StyledInputCntainer>
+                                <StyledLabel htmlFor="email">Email:</StyledLabel>
+                                <StyledInput
+                                    id="email"
+                                    type="email"
+                                    name="email"
+                                    required
+                                    value={email}
+                                    onChange={e => setEmail(e.target.value)}
+                                />
+                            </StyledInputCntainer>
+                            <StyledInputCntainer>
+                                <StyledLabel htmlFor="message">Message:</StyledLabel>
+                                <StyledTextarea
+                                    id="message"
+                                    type="text"
+                                    name="message"
+                                    rows="6"
+                                    required
+                                    value={message}
+                                    onChange={e => setMessage(e.target.value)}
+                                ></StyledTextarea>
+                            </StyledInputCntainer>
+                            <MessageInfoContainer>
+                                <StyledButtonSubmit>send</StyledButtonSubmit>
+                                <StyledMessageSendInfo visible={messageSend}>message sended</StyledMessageSendInfo>
+                            </MessageInfoContainer>
+                        </StyledForm>
+                    </StyledSideForm>
+                </StyledContent>
+                <StyledLine></StyledLine>
+                <StyledP>or You can found my on:</StyledP>
+                <StyledSocialContainer>
+                    <ButtonWithIco href="https://github.com/Axemaher" icoUrl={codepenIco}>
+                        codepen
                             </ButtonWithIco>
-                <ButtonWithIco href="https://codepen.io/marcinboczkowski/" icoUrl={githubIco}>
-                    github
+                    <ButtonWithIco href="https://codepen.io/marcinboczkowski/" icoUrl={githubIco}>
+                        github
                             </ButtonWithIco>
-            </StyledSocialContainer>
-        </StyledContactWrapper>
+                </StyledSocialContainer>
+            </StyledContactWrapper>
+        </Page>
     );
 }
 

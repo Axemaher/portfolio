@@ -5,7 +5,8 @@ import { projects } from '../../data.json';
 
 import Navigation from './Navigation';
 import Project from './Project';
-import PageInfo from '../PageInfo'
+import PageInfo from '../PageInfo';
+import Page from '../../components/Page';
 
 const StyledProjectsWrapper = styled.div`
     display: block;
@@ -58,27 +59,29 @@ const Projects = () => {
             });
         };
         return (
-            <StyledProjectsWrapper>
-                <PageInfo>projects</PageInfo>
-                <Navigation
-                    projects={projectsToRender}
-                    activeProject={activeProject}
-                    handleCLick={handleCLick}
-                />
-                {projectsToRender.map((item, i) => {
-                    return (
-                        <Project
-                            key={item.id}
-                            activeProject={activeProject}
-                            data={item}
-                            label={`0${i + 1}`}
-                            setActiveProject={setActiveProject}
-                            pageHeight={pageHeight}
-                            refs={refs}
-                        />
-                    );
-                })}
-            </StyledProjectsWrapper>
+            <Page>
+                <StyledProjectsWrapper>
+                    <PageInfo>projects</PageInfo>
+                    <Navigation
+                        projects={projectsToRender}
+                        activeProject={activeProject}
+                        handleCLick={handleCLick}
+                    />
+                    {projectsToRender.map((item, i) => {
+                        return (
+                            <Project
+                                key={item.id}
+                                activeProject={activeProject}
+                                data={item}
+                                label={`0${i + 1}`}
+                                setActiveProject={setActiveProject}
+                                pageHeight={pageHeight}
+                                refs={refs}
+                            />
+                        );
+                    })}
+                </StyledProjectsWrapper>
+            </Page>
         );
     }
 }

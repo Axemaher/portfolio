@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import ProjectSlider from './ProjectSlider';
+import Page from '../../components/Page';
 
 const StyledProjectsWrapper = styled.div`
     display: grid;
@@ -31,6 +32,7 @@ const StyledH1 = styled.h1`
 const StyledRow = styled.div`
     width: 100vw;
     place-self: center;
+    overflow: hidden;
 `;
 
 const StyledRowHeader = styled(StyledRow)`
@@ -43,16 +45,17 @@ const StyledRowHeader = styled(StyledRow)`
 const Home = () => {
 
     return (
-        <StyledProjectsWrapper>
-            <StyledRowHeader>
-                <StyledLogo src={require(`../../images/logo.png`)} alt="logo" />
-                <StyledH1>Hi - i’m Marcin i build web apps</StyledH1>
-            </StyledRowHeader>
-            <StyledRow>
-                <ProjectSlider />
-            </StyledRow>
-        </StyledProjectsWrapper>
-    );
+        <Page>
+            <StyledProjectsWrapper>
+                <StyledRowHeader>
+                    <StyledLogo src={require(`../../images/logo.png`)} alt="logo" />
+                    <StyledH1>Hi - i’m Marcin i build web apps</StyledH1>
+                </StyledRowHeader>
+                <StyledRow>
+                    <ProjectSlider />
+                </StyledRow>
+            </StyledProjectsWrapper>
+        </Page>);
 }
 
 
