@@ -160,10 +160,10 @@ const Menu = () => {
                         </StyledMenuLinks>
                         <StyledMenuSocial>
                             <ButtonWithIco href="https://github.com/Axemaher" icoUrl={codepenIco}>
-                                codepen
+                                github
                             </ButtonWithIco>
                             <ButtonWithIco href="https://codepen.io/marcinboczkowski/" icoUrl={githubIco}>
-                                github
+                                codepen
                             </ButtonWithIco>
                         </StyledMenuSocial>
                     </StyledNav>

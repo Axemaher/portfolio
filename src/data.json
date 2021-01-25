@@ -2,8 +2,34 @@
     "projects": [
         {
             "id": "01",
+            "name": "Game - combat simulator",
+            "image": "https://images.ctfassets.net/fr32xkxy9k0q/31bGW32TEne0GbSDxeLSAY/064472ae13bb6eec6ccf1ce7ed3bf83b/screenshot.29.jpg",
+            "imageSm": "https://images.ctfassets.net/fr32xkxy9k0q/6mjouBCeGAk9erq5WCQ3qF/a683c19ad1c087980190e3d0e2b6a040/screenshot.29.jpg",
+            "subname": "Turn based combat simulator",
+            "listData": [
+                "combat depends on action points.",
+                "you can view the statistics in real time.",
+                "the log informs us about the current course of the fight.",
+                "we have several types of skills to use, e.g. attack, special attack or utilities.",
+                "skills may have additional effects, e.g. bleeding or healing the caster for a certain number of turns.",
+                "on a smartphone, the skill information is previewed by holding down the tile.",
+                "defense system",
+                "project still being developed"
+            ],
+            "technologies": [
+                "react",
+                "redux",
+                "unit tests (jest)",
+                "rwd"
+            ],
+            "live": "https://tbcs.netlify.app/",
+            "code": "https://github.com/Axemaher/turn-based-combat-simulator"
+        },
+        {
+            "id": "02",
             "name": "Games database",
             "image": "https://images.ctfassets.net/fr32xkxy9k0q/vKh2DKWWynhs7ce7ZsNG2/8bd57043cfeb199f1d24f38ea2292a22/games-database.png",
+            "imageSm": "https://images.ctfassets.net/fr32xkxy9k0q/JcrnQd3tf8tsEapBO5Ood/fa456beb059eeaff33e8f5ad6b09ba8a/screenshot.5.jpg",
             "subname": "Games website",
             "listData": [
                 "getting data from IGDB API",
@@ -22,9 +48,10 @@
             "code": "https://github.com/Axemaher/games-database"
         },
         {
-            "id": "02",
+            "id": "03",
             "name": "Garlic website",
             "image": "https://images.ctfassets.net/fr32xkxy9k0q/4ekjuchx1MbRK27jy3ojq1/eaa5f92a4a8e4600e1407596f511e995/garlic-website.png",
+            "imageSm": "https://images.ctfassets.net/fr32xkxy9k0q/2655YOV6sNkjgH4PAsbDFe/18d4002a4a8cb7447e1d02472084ef4f/garlic-website.png",
             "subname": "Website",
             "listData": [
                 "data from Contentful"
@@ -39,9 +66,10 @@
             "code": "https://github.com/Axemaher/garlic-website"
         },
         {
-            "id": "03",
+            "id": "04",
             "name": "Reclamations",
             "image": "https://images.ctfassets.net/fr32xkxy9k0q/6zDTX8Ds6xehTsEmJArQUD/1657393ade60e8a025ed9608e761e7af/reclamations.png",
+            "imageSm": "https://images.ctfassets.net/fr32xkxy9k0q/Mkt0RXuxvmZT1I7S11DSY/79f21a4e8a9cf1013f5751ad7076e1ab/reclamations.png",
             "subname": "Program for handling complaints",
             "listData": [
                 "adding a case",
@@ -62,9 +90,10 @@
             "code": "https://github.com/Axemaher/reklamacje"
         },
         {
-            "id": "04",
+            "id": "05",
             "name": "Weather app",
             "image": "https://images.ctfassets.net/fr32xkxy9k0q/4cqPG89hjFQePh7Nx1cI7Z/365367eb664c2c2c0e87e883149fcde1/weather.png",
+            "imageSm": "https://images.ctfassets.net/fr32xkxy9k0q/ce08ObGGsV8HSGIHk6a0E/8a2e0be143bf4d71dbe99189543a7b83/weather.png",
             "subname": "Program for handling complaints",
             "listData": [
                 "searching",

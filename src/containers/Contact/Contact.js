@@ -194,10 +194,10 @@ const Contact = () => {
                 <StyledP>or You can found my on:</StyledP>
                 <StyledSocialContainer>
                     <ButtonWithIco href="https://github.com/Axemaher" icoUrl={codepenIco}>
-                        codepen
+                        github
                             </ButtonWithIco>
                     <ButtonWithIco href="https://codepen.io/marcinboczkowski/" icoUrl={githubIco}>
-                        github
+                        codepen
                             </ButtonWithIco>
                 </StyledSocialContainer>
             </StyledContactWrapper>
