@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import ButtonAnchor from '../../components/ButtonAnchor';
+import PointedElement from '../../components/PointedElement';
 
 const StyledSection = styled.section`
     margin: 0 auto;
@@ -91,21 +92,6 @@ const StyledDescriptionList = styled.ul`
     list-style: none;
 `;
 
-const StyledPointedElement = styled.li`
-    position: relative;
-    margin-bottom: 5px;
-    &:before{
-        position: absolute;
-        content: "";
-        width: 10px;
-        height: 10px;
-        border: 2px solid #88c4e2;
-        border-radius: 50%;
-        left: -16px;
-        top: .3em;
-    }
-`;
-
 const StyledImage = styled.img`
     box-sizing: border-box;
     width: 100%;
@@ -118,8 +104,7 @@ const Project = ({ data, label, activeProject, setActiveProject, pageHeight = 10
 
     useEffect(() => {
         const observerConfig = {
-            rootMargin: `-${
-                pageHeight % 2 === 0 ? observerMargin - 1 : observerMargin
+            rootMargin: `-${pageHeight % 2 === 0 ? observerMargin - 1 : observerMargin
                 }px 0px -${observerMargin}px 0px`,
         };
         const handleIntersection = function (entries) {
@@ -163,13 +148,13 @@ const Project = ({ data, label, activeProject, setActiveProject, pageHeight = 10
                 <StyledListTitle>The following functions have been implemented:</StyledListTitle>
                 <StyledDescriptionList>
                     {data.listData.map(e => (
-                        <StyledPointedElement key={e}>{e}</StyledPointedElement>
+                        <PointedElement key={e}>{e}</PointedElement>
                     ))}
                 </StyledDescriptionList>
                 <StyledListTitle>Technologies:</StyledListTitle>
                 <StyledDescriptionList>
                     {data.technologies.map(e => (
-                        <StyledPointedElement key={e}>{e}</StyledPointedElement>
+                        <PointedElement key={e}>{e}</PointedElement>
                     ))}
                 </StyledDescriptionList>
             </StyledDescription>

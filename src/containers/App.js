@@ -6,6 +6,7 @@ import Home from './Home/Home';
 import Contact from '../containers/Contact/Contact';
 import Menu from '../containers/Menu/Menu';
 import Projects from './Projects/Projects';
+import About from './About/About';
 import './PageAnimation.css';
 
 
@@ -26,6 +27,7 @@ const App = () => {
                 <Route
                   exact path="/"
                   component={() => <Home />} />
+                <Route path="/about/" component={() => <About />} />
                 <Route path="/projects/" component={() => <Projects />} />
                 <Route path="/contact/" component={() => <Contact />} />
               </Switch>
