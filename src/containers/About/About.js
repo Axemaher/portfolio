@@ -26,11 +26,26 @@ const StyledAboutContent = styled.div`
     max-width: 1440px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto auto;
+    grid-template-rows: auto ;
     gap: 40px 0px;
     grid-template-areas:
         "about-my about-my ."
         "hard-skills soft-skills tools";
+    @media ${({ theme }) => theme.device.tablet} {
+        grid-template-columns: 1fr 1fr ;
+        grid-template-areas:
+        "about-my about-my "
+        "hard-skills soft-skills "
+        "tools . ";
+    }
+    @media ${({ theme }) => theme.device.mobileL} {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "about-my"
+        "hard-skills"
+        "soft-skills"
+        "tools ";
+    }
 `;
 
 const StyledList = styled.ul`
